@@ -18,6 +18,13 @@ class StudyTest {
         assertEquals(StudyStatus.DRAFT, study.getStatus(), "스터디를 처음 만들면 DRAFT 상태다.");
         // 람다식을 사용하면 위의 문제를 해결할 수 있어 문자열 연산의 비용을 최소화 할 수 있다.
         assertEquals(StudyStatus.DRAFT, study.getStatus(), () -> "스터디를 처음 만들면 DRAFT 상태다.");
+        // 위의 람다식의 원래 형태
+        assertEquals(StudyStatus.DRAFT, study.getStatus(), new Supplier<String>() {
+            @Override
+            public String get() {
+                return "스터디를 처음 만들면 DRAFT 상태다.";
+            }
+        });
 
     }
 
