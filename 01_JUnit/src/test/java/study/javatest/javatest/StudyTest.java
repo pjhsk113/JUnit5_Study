@@ -6,6 +6,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class StudyTest {
+    /**
+     * IntelliJ에서 DisplayName이 안먹히는 경우,
+     * 별도의 설정을 해주어야한다.
+     * 블로그에 정리해서 올릴 예정.
+     */
 
     @Test
     @DisplayName("스터디 만들기")
